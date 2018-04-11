@@ -41,10 +41,45 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
                 @Override public void onClick(View v) {
                     int position = getAdapterPosition();
 
-                    Snackbar.make(v, "Click detected on item " + position,
-                            Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-
+                    if(position == 0)
+                    {
+                        mContext.startActivity(new Intent(mContext, AbsActivity.class));
+                    }
+                    else if(position == 1)
+                    {
+                        Intent i = new Intent(mContext, ChestActivity.class);
+                        mContext.startActivity(i);
+                    }
+                    else if(position == 2)
+                    {
+                        Intent i = new Intent(mContext, ShoulderActivity.class);
+                        mContext.startActivity(i);
+                    }
+                    else if(position == 3)
+                    {
+                        Intent i = new Intent(mContext, BicepsActivity.class);
+                        mContext.startActivity(i);
+                    }
+                    else if(position == 4)
+                    {
+                        Intent i = new Intent(mContext, AbsActivity.class);
+                        mContext.startActivity(i);
+                    }
+                    else if(position == 5)
+                    {
+                        Intent i = new Intent(mContext, TricepsActivity.class);
+                        mContext.startActivity(i);
+                    }
+                    else if(position == 6)
+                    {
+                        Intent i = new Intent(mContext, BackActivity.class);
+                        mContext.startActivity(i);
+                    }
+                    else if(position == 7)
+                    {
+                        Intent i = new Intent(mContext, CardioActivity.class);
+                        mContext.startActivity(i);
+                    }
                 }
             });
         }
